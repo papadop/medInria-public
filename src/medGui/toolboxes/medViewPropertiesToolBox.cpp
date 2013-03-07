@@ -411,10 +411,7 @@ void medViewPropertiesToolBox::update(dtkAbstractView *view)
     }
 
     medAbstractView * medView = dynamic_cast<medAbstractView *> (view);
-    if ( ! medView )
-        return;
-
-    if ((d->view == dynamic_cast<medAbstractView *> (view)))
+    if ( ! medView || d->view == medView)
         return;
 
     d->view = medView;
