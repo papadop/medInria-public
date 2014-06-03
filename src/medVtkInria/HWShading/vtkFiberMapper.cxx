@@ -275,7 +275,6 @@ void vtkFiberMapper::DrawLines(vtkPoints* points, vtkCellArray* lineStrips,
   vtkIdType npts = 0;
   unsigned short count = 0;
   vtkIdType cellNum = 0;
-  vtkIdType totalCells = lineStrips->GetNumberOfCells();
   vtkDebugMacro(<<"Drawing "<<totalCells<<" line strips.");
 
   double* previousPoint = new double[3];
