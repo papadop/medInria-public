@@ -22,9 +22,11 @@ class dtkPlugin;
 class MEDCORE_EXPORT medDiffusionAbstractToolBox : public medToolBox
 {
     Q_OBJECT
+
 public:
-    medDiffusionAbstractToolBox(QWidget *parentToolBox = 0);
-    virtual ~medDiffusionAbstractToolBox();
+
+    medDiffusionAbstractToolBox(QWidget *parent = 0): medToolBox(parent) { }
+    virtual ~medDiffusionAbstractToolBox() { }
 
     /**
      * @brief Returns the plugin this custom Toolbox comes from.
@@ -36,15 +38,4 @@ public:
     
     virtual QString processName() = 0;
     virtual void setProcessParameters(medAbstractDiffusionProcess *process) = 0;
-};
-
-class MEDCORE_EXPORT medDiffusionScalarMapsAbstractToolBox : public medDiffusionAbstractToolBox
-{
-    Q_OBJECT
-public:
-    medDiffusionScalarMapsAbstractToolBox(QWidget *parentToolBox = 0);
-    virtual ~medDiffusionScalarMapsAbstractToolBox();
-    
-signals:
-    void processStartRequested();
 };
