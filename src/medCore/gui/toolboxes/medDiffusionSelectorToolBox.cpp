@@ -188,7 +188,7 @@ void medDiffusionSelectorToolBox::chooseToolBox(int id)
     else
     {
         medToolBox* tb = medToolBoxFactory::instance()->createToolBox(identifier, this);
-        toolbox = qobject_cast<medDiffusionAbstractToolBox*>(tb);
+        toolbox = static_cast<medDiffusionAbstractToolBox*>(tb);
 
         if (toolbox)
         {
