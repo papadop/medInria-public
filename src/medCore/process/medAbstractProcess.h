@@ -18,39 +18,32 @@
 
 #include <medCoreExport.h>
 
-class medAbstractProcessPrivate;
+/// Extending dtkAbstractProcess class to hold more specific information
 
+class MEDCORE_EXPORT medAbstractProcess: public dtkAbstractProcess {
 
-/**
- * Extending dtkAbstractProcess class to hold more specific information
- */
-class MEDCORE_EXPORT medAbstractProcess : public dtkAbstractProcess
-{
     Q_OBJECT
 
 public:
-    medAbstractProcess( medAbstractProcess * parent = NULL );
-    virtual ~medAbstractProcess();
+
+    medAbstractProcess(medAbstractProcess* parent=NULL) { }
+    virtual ~medAbstractProcess() { }
 
 public slots:
-    virtual medAbstractData *output() = 0;
-    virtual int update () = 0;
+
+    virtual medAbstractData* output() = 0;
+    virtual int update() = 0;
 
 private:
+
     using dtkAbstractProcess::onCanceled;
     using dtkAbstractProcess::read;
     using dtkAbstractProcess::write;
     using dtkAbstractProcess::setParameter;
     using dtkAbstractProcess::setInput;
     using dtkAbstractProcess::setData;
-    //TODO rename our output methode
+    //TODO rename our output method
     //using dtkAbstractProcess::output;
     using dtkAbstractProcess::data;
     using dtkAbstractProcess::channelCount;
-
-private:
-    medAbstractProcessPrivate* d;
-
 };
-
-
