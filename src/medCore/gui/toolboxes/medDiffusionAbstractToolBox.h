@@ -19,10 +19,7 @@
 class medAbstractDiffusionProcess;
 class dtkPlugin;
 
-class MEDCORE_EXPORT medDiffusionAbstractToolBox : public medToolBox
-{
-    Q_OBJECT
-
+class MEDCORE_EXPORT medDiffusionAbstractToolBox: public medToolBox {
 public:
 
     medDiffusionAbstractToolBox(QWidget *parent = 0): medToolBox(parent) { }
