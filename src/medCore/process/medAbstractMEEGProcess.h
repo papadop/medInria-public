@@ -19,13 +19,10 @@
 class medAbstractData;
 
 class MEDCORE_EXPORT medAbstractMEEGProcess: public medAbstractProcess {
-
-    Q_OBJECT
-
 public:
 
     medAbstractMEEGProcess(medAbstractProcess*parent=NULL): medAbstractProcess(parent) { }
     virtual ~medAbstractMEEGProcess() { }
 
-    virtual void setInputImage(medAbstractData *data) = 0;
+    virtual void setInputImage(medAbstractData* data) = 0;
 };
