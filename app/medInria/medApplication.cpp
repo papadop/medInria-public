@@ -164,7 +164,7 @@ void medApplication::initialize()
     medDataManager::initialize();
 
     // Registering different workspaces
-    medWorkspaceFactory * viewerWSpaceFactory = medWorkspaceFactory::instance();
+    medWorkspaceFactory* viewerWSpaceFactory = medWorkspaceFactory::instance();
     viewerWSpaceFactory->registerWorkspace<medVisualizationWorkspace>();
     viewerWSpaceFactory->registerWorkspace<medRegistrationWorkspace>();
     viewerWSpaceFactory->registerWorkspace<medDiffusionWorkspace>();
@@ -173,7 +173,7 @@ void medApplication::initialize()
     viewerWSpaceFactory->registerWorkspace<medSegmentationWorkspace>();
 
     //Register settingsWidgets
-    medSettingsWidgetFactory * settingsWidgetFactory = medSettingsWidgetFactory::instance();
+    medSettingsWidgetFactory* settingsWidgetFactory = medSettingsWidgetFactory::instance();
     settingsWidgetFactory->registerSettingsWidget<medSystemSettingsWidget>();
     settingsWidgetFactory->registerSettingsWidget<medStartupSettingsWidget>();
     settingsWidgetFactory->registerSettingsWidget<medDatabaseSettingsWidget>();
@@ -181,6 +181,6 @@ void medApplication::initialize()
     //Register annotations
     //TODO there is obviously something that have to be done here. - RDE
     //TODO I did something... was it enough ? - Flo
-    medAbstractDataFactory * datafactory = medAbstractDataFactory::instance();
+    medAbstractDataFactory* datafactory = medAbstractDataFactory::instance();
     datafactory->registerDataType<medSeedPointAnnotationData>();
 }
