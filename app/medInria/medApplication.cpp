@@ -28,6 +28,7 @@
 #include <medAbstractWorkspace.h>
 #include <medFilteringWorkspace.h>
 #include <medDiffusionWorkspace.h>
+#include <medMEEGWorkspace.h>
 #include <medRegistrationWorkspace.h>
 #include <medVisualizationWorkspace.h>
 #include <medSegmentationWorkspace.h>
@@ -167,6 +168,7 @@ void medApplication::initialize()
     viewerWSpaceFactory->registerWorkspace<medVisualizationWorkspace>();
     viewerWSpaceFactory->registerWorkspace<medRegistrationWorkspace>();
     viewerWSpaceFactory->registerWorkspace<medDiffusionWorkspace>();
+    viewerWSpaceFactory->registerWorkspace<medMEEGWorkspace>();
     viewerWSpaceFactory->registerWorkspace<medFilteringWorkspace>();
     viewerWSpaceFactory->registerWorkspace<medSegmentationWorkspace>();
 
