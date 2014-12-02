@@ -25,12 +25,9 @@ public:
     medMEEGAbstractToolBox(QWidget *parent = 0): medToolBox(parent) { }
     virtual ~medMEEGAbstractToolBox() { }
 
-    /**
-     * @brief Returns the plugin this custom Toolbox comes from.
-     *
-     * Used to fill the aboutPlugin button in the parent toolbox.
-     *
-     */
+    /// @brief Returns the plugin this custom Toolbox comes from.
+    /// Used to fill the aboutPlugin button in the parent toolbox.
+
     virtual dtkPlugin *plugin()const = 0;
     
     virtual QString processName() = 0;
